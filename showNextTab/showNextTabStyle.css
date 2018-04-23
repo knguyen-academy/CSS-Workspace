@@ -163,7 +163,7 @@ body{
     width:100%;
     height:100%;
     background: gainsboro;
-    display: none;
+    /* display: none; */
     padding: 50px 20px 50px; /* top left+right bot */
     left: 0;
     top: 0;
@@ -185,7 +185,9 @@ body{
     padding: 30px 30px;
 }
 
-
+.formSignup.tab2{
+    display: none;
+}
 .singupContainer input[type="text"], .singupContainer input[type="password"]{
 background-color: transparent;
 border:none;
@@ -202,21 +204,32 @@ outline: none;
     font-size: 16px;
     
 }
-.singupContainer #Next_Button{
+
+
+.singupContainer input[type="button"]{
+    height: 40px;
+    margin-bottom: 20px;
+    color:white;
+    font-size: 16px;
+    
+}
+
+
+.singupContainer #Next_Button,#Prev_Button{
     background-color: #4CAF50;
     border: none;
 }
 
-.singupContainer #Next_Button:hover{
+.singupContainer #Next_Button:hover,#Prev_Button:hover{
     background-color:rgb(53, 117, 56);
 }
 
-.singupContainer #Cancel_Button{
+.singupContainer #Cancel_Button,#Confirm_Button{
     background-color:  #f44336;
     border: none;
 }
 
-.singupContainer #Cancel_Button:hover{
+.singupContainer #Cancel_Button:hover,#Confirm_Button:hover{
     background-color:#b33128;
 }
 .singupContainer select{

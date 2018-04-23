@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="showNextTabStyle.css">
+</head>
+
+<body>
+    <!-- Modal tab1 -->
+    <div id="id01" class="modal">
+        <!-- Form -->
+        <form id="signupStep" class="formSignup tab1">
+            <!-- Form container -->
+            <div id = 'id02'class="singupContainer">
+
+                <h2>Sign Up</h2>
+                <p>Please fill in this form to create an account</p>
+                <hr>
+                <input id="FirstName_TextBox" type="text" placeholder="First Name" />
+                <input id="LastName_TextBox" type="text" placeholder="Last Name" />
+                <select id="Gender_DropDownList1" runat="server">
+                    <option value="-1">Gender</option>
+                    <option value="1">Male</option>
+                    <option value="2">Female</option>
+                </select>
+                <input id="Phone_TextBox" runat="server" type="text" placeholder="Phone" />
+                <input id="Username_TextBox" runat="server" type="text" placeholder="Username" />
+                <input id="Email_TextBox" runat="server" type="text" placeholder="Email" />
+                <input id="Password_TextBox" runat="server" type="password" placeholder="Password" />
+                <input id="ConfirmPW_TextBox" runat="server" type="password" placeholder="Confirm Password" />
+                <p>By creating an account you agree to our
+                    <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+                <div>
+                    <input id="Next_Button" onclick="nextForm()" type="button" value="Next" runat="server" />
+                    <input id="Cancel_Button" onclick="bringDown()" type="button" value="Cancel" runat="server" />
+                </div>
+            </div>
+            <!-- container -->
+        </form>
+
+        <div id="confirmStep" class="formSignup tab2">
+            <h2>Confirm</h2>
+            <p>Please fill in this form to create an account</p>
+            <div class="singupContainer">
+                <p>First name: </p>
+                <p>Last name: </p>
+                <p>Phone: </p>
+                <p>Gender: </p>
+                <p>Username: </p>
+                <p>Email: </p>
+                <div>
+                    <input id="Prev_Button" onclick="prevForm()" type="button" value="Previous" runat="server" />
+                    <input id="Confirm_Button" onclick="confirmForm()" type="button" value="Confirm" runat="server" />
+                </div>
+            </div>
+        </div>
+        <!-- modal -->
+        <script src="showNextTab.js"></script>
+</body>
+
+</html>

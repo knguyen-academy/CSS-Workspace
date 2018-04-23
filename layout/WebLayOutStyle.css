@@ -46,9 +46,7 @@ text-align: center;
     background-color: #555;
     color: white;
 }
-.leftSideNav a:visited{
-    background-color: red;
-}
+
 /* MIDDLE PANEL */
 .mainContent{
 padding: 10px;

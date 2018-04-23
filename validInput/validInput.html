@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+input.invalid {
+  background-color: #ffdddd;
+}
+    
+    </style>
+</head>
+<body>
+        <input type="text" oninput="this.className = ''" placeholder="Name"/>
+        <input type="text" oninput="this.className = ''" placeholder="Sex"/>
+        <input type="text" oninput="this.className = ''" placeholder="Phone"/>
+        <input type="text" oninput="this.className = ''" placeholder="Age"/>
+
+        <button type="button" id="confirm" onclick="next()">Confirm</button>
+
+        <script src="validInput.js"></script>
+       
+</body>
+
