@@ -1,0 +1,29 @@
+.slideNav{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+}
+
+.slideNav a{
+color: white;
+background: rebeccapurple;
+text-decoration: none;
+display: block;
+}
+
+.slideNav a:hover{
+background: palegreen;
+
+}
+#main1
+{
+   
+    padding: 16px;
+    background: gray;
+}

@@ -1,0 +1,130 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background: black;
+    color: white;
+    margin: 0;
+}
+
+
+.sideBar
+{
+    background-color: rgb(34, 34, 34);
+    width: 120px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-family: 'Courier New', Courier, monospace;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.sideBar a{
+    width: 100%;
+    padding-top:20px;
+    padding-bottom: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    color:white;
+}
+
+#homeButton
+{
+    margin-top:100px;
+}
+.sideBar a:hover{
+    background: black;
+    transition: 0.7s;
+}
+
+.sideBar i{
+    font-size: 40px;
+}
+
+.main
+{
+    background-color: black;
+    margin-left: 120px;
+    padding: 12px 220px;
+    transition: margin-left .5s;
+    
+}
+
+
+.fa-align-justify
+{
+    font-size: 40px;
+    position:fixed;
+    left: 150px;
+
+}
+
+.main i{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.main i:hover{
+    opacity: 1;
+}
+
+.home h1{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    margin: 10px 0;
+    padding-top:10px;
+    font-size: 64px!important;
+}
+
+.home
+{
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+}
+
+.home p
+{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 10px;
+}
+
+.home img{
+padding-top:150px;
+max-width: 100%;
+height: auto;
+}
+
+h2{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    margin: 10px 0;
+    padding-top:10px;
+    font-size: 32px!important;
+}
+
+hr{
+    width:200px; 
+    margin:20px 0;
+    opacity: 0.7;
+}
+
+.about p, ul{
+    color: #757575!important;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.downloadResume {
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    border: 0;
+}
+
+.downloadResume:hover{
+    background: #757575!important;
+}

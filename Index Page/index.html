@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Index</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<div id="mySlideBar" class="sideBar">
+    <!-- Avatar image in top left corner -->
+    <a id="homeButton" href="#" >
+        <i class="fa fa-home"></i>
+        <p>HOME</p>
+    </a>
+    <a href="#aboutMe" >
+        <i class="fa fa-user "></i>
+        <p>ABOUT</p>
+    </a>
+    <a href="#myProject" >
+        <i class="fa fa-suitcase "></i>
+        <p>PROJECTS</p>
+    </a>
+    <a href="#myTravel" >
+        <i class="fa fa-plane "></i>
+        <p>TRAVEL</p>
+    </a>
+    <a href="#contactMe" >
+        <i class="fa fa-envelope"></i>
+        <p>CONTACT</p>
+    </a>
+</div>
+
+<!-- Page Content -->
+<div id="myMain" class="main">
+   <i class="fa fa-align-justify" onclick="slideNav()"></i>
+  <!-- Header/Home -->
+  <header id="myhome" class="home">
+      <h1>Hi I'm Khoi</h1>
+    <p>Computer Engineer.</p>
+    <img src="header_photo.jpg" alt="superman" width="992" height="1108">
+  </header>
+
+  <!-- About Section -->
+  <div id="aboutMe" class="about">
+    <h2>About me</h2>
+    <hr>
+    <p> My name is Khoi Nguyen. I am a fulltime software developer but I love spending my spare time blogging and travelling. This page is created to share my experience about my knowledge
+        as well as my travel's experience. 
+        This is the paragraph...This is the paragraph...This is the paragraph...This is the paragraph...This is the paragraph...This is the paragraph...This is the paragraph...
+        This is the paragraph...This is the paragraph...This is the paragraph...This is the paragraph...This is the paragraph...This is the paragraph...This is the paragraph...
+        This is the paragraph...This is the paragraph...This is the paragraph...This is the paragraph...This is the paragraph...This is the paragraph...This is the paragraph...
+        This is the paragraph...This is the paragraph...This is the paragraph...This is the paragraph...This is the paragraph...This is the paragraph...This is the paragraph...
+    </p>
+    <h2>Professional </h2>
+    <hr>
+    <p> <ul>
+            <li>4+ years experienced in C, C++ programming and low level hardware languages: VHDL and Verilog.</li>
+            <li>1+ years experienced in Python, .NET, C#, SQL, Linux shell bash automation scripting.</li>
+            <li>Knowledge of Operating System concepts, RTOS and X86 architecture.</li>
+            <li>Accomplished many engineer projects involving in utilizing embedded systems, Micro-controllers, ATmega, Arduino, ARM boards.</li>
+            <li>Developed database software and designed technical shoe for diabetic patients in senior project.</li>
+            <li>1 years experienced in DB2 Database</li>
+            <li>4+ months experienced in web development including Javascript, CSS, HTML, Jquery.</li>
+          </ul>  
+        </p>
+    </div>
+    
+    <button class="downloadResume">
+      <i class="fa fa-download"></i> Download Resume
+    </button>
+<div id="myProject" class="project">
+        <h2>My Projects</h2>
+        <hr>
+    
+</div>
+<div id="myTravel" class="travel">
+        <h2>My Travels</h2>
+        <hr>
+
+</div>
+  <!-- Contact Section -->
+  <div id="contactMe" class="contact">
+    <h2 >Contact Me</h2>
+    <hr>
+
+    <div class="w3-section">
+      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Sacramento, US</p>
+      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: knguyen.academy@gmail.com</p>
+    </div><br>
+    <p>Lets get in touch. Send me a message:</p>
+
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message"></p>
+      <p>
+        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </p>
+    </form>
+  <!-- End Contact Section -->
+  </div>
+  
+    <!-- Footer -->
+  <footer class="w3-content ">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <p class="w3-medium">Created by @Khoi Nguyen</p>
+  <!-- End footer -->
+  </footer>
+
+<!-- END PAGE CONTENT -->
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>
