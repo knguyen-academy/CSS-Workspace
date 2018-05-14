@@ -1,0 +1,110 @@
+*{
+    box-sizing: border-box;
+  }
+  body {
+    width: 100%;
+    height: 100%;
+    background: url("https://s-media-cache-ak0.pinimg.com/originals/c4/cb/5a/c4cb5a4b31bae636381bdc24c7990531.jpg") ;
+    /* margin: 0 20px; */
+  }
+  
+  .galleryContainer {
+    margin-top:180px;
+    /* background-color:gray; */
+    width: 100%;
+    height: 600px;
+    display: flex;
+    overflow-x: hidden;
+    position: relative; /*  need for animation */
+    /* border:10px black; */
+    
+  }
+  
+  .galleryContent {
+    /* background-color:darkgray; */
+    min-width: 800px;
+    margin: 5px;
+    height: auto;
+    border: none;
+  }
+  
+  .galleryContent .imgTitle {
+    bottom:-200px;
+    color: white;
+    position: absolute;
+    font-size: 25px;
+    margin-left:5%;
+    /* display: none; */
+    /* z-index: 1; */
+  }
+  
+  .galleryContent:hover .imgTitle
+  {
+    bottom: 150px;
+    transition: 1s ease;
+  }
+  .galleryContent img{
+    -webkit-filter: blur(3px); /* Safari 6.0 - 9.0 */
+    filter: blur(3px);
+    /* display: block; */
+    /* height: auto; */
+  }
+  .galleryContent img:hover{
+    -webkit-filter: blur(0); /* Safari 6.0 - 9.0 */
+    filter: blur(0);
+    cursor: pointer;
+    transform: scale(1.02, 1.02); /** default is 1, scale it to 1.5 */
+  }
+  
+  .galleryContent img{
+    width: 100%;
+    height: 100%;
+  }
+  
+  .galleryBtn 
+  {
+    margin-top:50px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  
+  .galleryBtn a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 0 10px;
+  }
+  #prevBtn {
+    background-color: #f1f1f1;
+    color: black;
+  }
+  
+  #nextBtn {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .round {
+    border-radius: 50%;
+  }
+  
+  /* .galleryContainer .galleryContent {
+    animation: moveSlideshow 7s linear infinite ;
+    animation-delay: 1s;
+  }
+  
+  @keyframes moveSlideshow {
+    25% { 
+      transform: translateX(-50%);  
+    }
+    50% { 
+      transform: translateX(-100%);  
+    }
+    75% { 
+      transform: translateX(-150%);  
+    }
+    100% { 
+      transform: translateX(-200%);  
+    }
+  } */

@@ -20,7 +20,6 @@ body{
     font-family: 'Courier New', Courier, monospace;
     transition: 0.5s;
     z-index: 1;
-    overflow:auto;
 }
 
 .sideBar a{
@@ -61,7 +60,6 @@ body{
     font-size: 40px;
     position:fixed;
     left: 150px;
-    z-index: 1;
 
 }
 
