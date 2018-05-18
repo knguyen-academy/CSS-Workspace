@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="table.css">
+</head>
+<body>
+        <h2>My Customers</h2>
+
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+        
+        <table id="myTable">
+          <tr class="header">
+              <th style="width: 2%">Del</th>
+              <th style="width: 2%">Edit</th>
+            <th style="width:58%;">Name</th>
+            <th style="width:38%;">Country</th>
+          </tr>
+          <tr id="Test">
+              <td class="del"><input type="button" value="-" /></td>
+              <td class="edit"><input type="button" value="+" /></td>
+            <td>Alfreds Futterkiste</td>
+            <td>Germany</td>
+          </tr>
+          <tr>
+                <td class="del"><input type="button" value="-" /></td>
+                <td class="edit"><input type="button" value="+" /></td>
+            <td>Berglunds snabbkop</td>
+            <td>Sweden</td>
+          </tr>
+          <tr>
+                <td class="del"><input type="button" value="-" /></td>
+                <td class="edit"><input type="button" value="+" /></td>
+            <td>Island Trading</td>
+            <td>UK</td>
+          </tr>
+          <tr>
+                <td class="del"><input type="button" value="-" /></td>
+                <td class="edit"><input type="button" value="+" /></td>
+            <td>Koniglich Essen</td>
+            <td>Germany</td>
+          </tr>
+
+        </table>
+        <button onclick="myFunction2()">Save it</button>
+        <p id ="result"></p>
+<script src="table.js"></script>
+</body>
+</html>

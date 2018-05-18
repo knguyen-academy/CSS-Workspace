@@ -1,8 +1,9 @@
 
 function autoHScroll(targetElement, speed) {
+  debugger
     var scrollWidth = $(targetElement).get(0).scrollWidth;
     var clientWidth = $(targetElement).get(0).clientWidth;
-    $(targetElement).animate({ scrollLeft: scrollWidth - clientWidth },
+     $(targetElement).animate({ scrollLeft: scrollWidth - clientWidth },
     {
         duration: speed,
         complete: function () {
@@ -20,7 +21,7 @@ function autoHScroll(targetElement, speed) {
   //calling funciton
   autoHScroll($('.galleryContainer'), 18000);
   
-  $("#prevBtn").click(function(){
+  $(".leftBtn").click(function(){
         // var a = $(".galleryContainer").width();
       //  var currentL = $(".galleryContainer").scrollLeft();
       // alert(currentL);
@@ -32,11 +33,13 @@ function autoHScroll(targetElement, speed) {
   
       });
   
-      $("#nextBtn").click(function(){
+      $(".rightBtn").click(function(){
         $(".galleryContainer").stop();
           $(".galleryContainer").animate({
               scrollLeft: "+=600px"
           }, "slow");
         
         });
-  
+$("#playBtn").click(function(){
+  autoHScroll($('.galleryContainer'), 5000);
+});

@@ -1,0 +1,67 @@
+#myTable 
+{
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid black;
+    width: 100%;
+}
+
+#myTable th, #myTable td{
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+#myTable th{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+#myTable tr:nth-child(even)
+{
+    background-color: #f2f2f2;
+}
+
+#myTable tr:hover{
+    background-color: #ddd;
+}
+
+#myTable .edit, #myTable .del
+{
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 25px;
+    padding: 0;
+    /* border: 0.5px solid; */
+}
+#myTable .del, #myTable .edit{
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+#myTable .edit{
+    color: green;
+    background: lightblue;
+}
+
+
+.del input, .edit input{
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+
+.del input:hover{
+    background: lightcoral;
+}
+
+.edit input:hover{
+    background: lightgreen;
+}

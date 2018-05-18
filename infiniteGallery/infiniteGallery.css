@@ -1,20 +1,32 @@
 *{
     box-sizing: border-box;
   }
+
+  h1
+  {
+    margin-top:30px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 2px;
+    font-size: 40px;
+    color:white;
+  }
   body {
     width: 100%;
     height: 100%;
-    background: url("https://s-media-cache-ak0.pinimg.com/originals/c4/cb/5a/c4cb5a4b31bae636381bdc24c7990531.jpg") ;
-    /* margin: 0 20px; */
+    /* background: url("https://s-media-cache-ak0.pinimg.com/originals/c4/cb/5a/c4cb5a4b31bae636381bdc24c7990531.jpg") ; */
+    background: url("https://lh3.googleusercontent.com/xAdcYwM2vcZCFdUplTt2yxReR07e_mFcEoDbHFEcOFwdfGW5a-PINHscAwDb3RxU79d3SlkMK6uszg3xQYV1Y7daQZs0ZGydo44W-0LFzc6T0wlmJUPDsKRVJGbbtLJ-msyPwrYOdRgVH_8HxUmE2vASFBMAeLdRbB8Dm5c2EhYmMAY5Y80T-FBpGOJ_hWaCQW11Phxaui-iP_t35kw_b_8MLy5CNWYM0OwoNTkTFv68_R7O-tEVSTCZuLc6WVqkjmjYSfLq1H1A6bgY05c6hF6gJ6YH_AuT5_LXrUYtIBgTX07FwAyMHNr3CZDVIZFFoVLHR-DoTirwwTg5wxjn901q_fHB5AbbWAGOcP3nVW5am5Z9fcgp3ge6t13ZwHeNNqfPJNLQ0GcRXOKMPvksS3JzYQXwxuaPLHGXQKQ-4_2nbnPX2uXpjCkmCyuww9_j6axJRHM0Syd4fRsGbaIU3phj6txjJZlfOW0JcGGIREzzekYoy2GE239jtjR0tF_KUl7W9MfjD33cFaZGElExXqmLAVSbBdEpqmsKM4B5AxLOhYfwje2QMNng93Jq8B6D_zoESLi-71a4ZQX_3xVdUyb5Z10H66-3zaXy_6o=w498-h574-no") ;
+    /* background: url("https://media1.giphy.com/media/U3qYN8S0j3bpK/giphy.gif"); */
+    margin: 0 10px;
   }
   
   .galleryContainer {
-    margin-top:180px;
+    margin-top:50px;
     /* background-color:gray; */
     width: 100%;
     height: 600px;
     display: flex;
-    overflow-x: hidden;
+    overflow: hidden;
     position: relative; /*  need for animation */
     /* border:10px black; */
     
@@ -44,14 +56,14 @@
     transition: 1s ease;
   }
   .galleryContent img{
-    -webkit-filter: blur(3px); /* Safari 6.0 - 9.0 */
-    filter: blur(3px);
+    -webkit-filter: blur(0); /* Safari 6.0 - 9.0 */
+    filter: blur(0);
     /* display: block; */
     /* height: auto; */
   }
   .galleryContent img:hover{
-    -webkit-filter: blur(0); /* Safari 6.0 - 9.0 */
-    filter: blur(0);
+    -webkit-filter: blur(3px); /* Safari 6.0 - 9.0 */
+    filter: blur(3px);
     cursor: pointer;
     transform: scale(1.02, 1.02); /** default is 1, scale it to 1.5 */
   }
@@ -75,20 +87,66 @@
     padding: 8px 16px;
     margin: 0 10px;
   }
-  #prevBtn {
+  /* #prevBtn {
     background-color: #f1f1f1;
     color: black;
-  }
+  } */
   
-  #nextBtn {
+  /* #nextBtn {
     background-color: #4CAF50;
     color: white;
   }
-  
+   */
   .round {
     border-radius: 50%;
   }
+
+  .leftBtn{
+    position: fixed;
+    height: 600px;
+    width: 70px;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0.2;
+    z-index: 1;
+  }
   
+  .leftBtn a, .rightBtn a {
+    color: white;
+    opacity: 0.1;
+    font: 80px bold;
+    position: fixed;
+    top:50%;
+    text-decoration: none;
+    /* vertical-align: center; */
+  }
+  .leftBtn a{
+    margin-left:20px;
+  }
+  .rightBtn a{
+    margin-left:20px;
+  }
+  .rightBtn{
+    position: fixed;
+    right: 0;
+    height: 600px;
+    width: 70px;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+  .leftBtn:hover, .rightBtn:hover{
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  .leftBtn:hover a, .rightBtn:hover a{
+    opacity: 1;
+  }
+
+  #playBtn
+  {
+    background: rgba(255, 255, 255, 0.1);
+    color: white; 
+  }
   /* .galleryContainer .galleryContent {
     animation: moveSlideshow 7s linear infinite ;
     animation-delay: 1s;
