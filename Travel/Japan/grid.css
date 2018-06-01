@@ -71,10 +71,10 @@ body {
 }
 
 .imgContent{
-    margin: 5% auto 15% auto;
+    margin: 1% auto;
     display: block;
-    width: 80%;
-    height: 80%;
+    /* width: 800px;
+    height: 600pxx; */
     /* max-width: 700px; */
 }
 .close {

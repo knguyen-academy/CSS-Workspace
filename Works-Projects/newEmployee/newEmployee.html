@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="newEmployee.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    
+    <!-- TOP MENU -->
+    <div class="topContainer">
+        <!-- TOP HEADER  -->
+        <div class="topHeader">
+            DBA DB2 SECTION
+        </div>
+        <!-- TOP CONTENT -->
+        <div class="topContent">
+            
+            <!-- New Employ -->
+            <div>
+                <a href="#newEmployeeSection">
+                    <img class="logo" src="newEmployee.png"></img>
+                </a>
+
+                <a href="#newEmployeeSection">
+                    <h1 style="text-align:center;">New Employee</h1>
+                </a>
+                <p class="topDescribe">New Employee Software Checklist. This includes the list of the needed software and the access to the DBA
+                    team shared drive.</p>
+
+
+            </div>
+
+            <!-- DBCR
+            <div class="top">
+                <a href="#DBCRSection">
+                    <img class="logo" src="DBCR1.png"></img>
+                </a>
+                <p>
+                    <a href="#DBCRSection">
+                        <h1 style="text-align:center;">DBCR</h1>
+                    </a>
+                    <p class="topDescribe">EDR developer/tester creates a DBCR request in ClearQuest. When it is approved and then assigned to dba.
+                        Dba will create a dbcr and apply to the dev environment for that release.</p>
+
+                </p>
+            </div> -->
+
+            <!-- HOW TO -->
+            <div>
+                <a href="#howtoSection">
+                    <img class="logo" src="howto.png"></img>
+                </a>
+                <a href="#howtoSection">
+                    <h1 style="text-align:center;">HOW TO</h1>
+                </a>
+                <p class="topDescribe">Basic steps and commands to do DBCR, patching, catalog, grant-connect...
+                    <ul>
+                        <li>
+                            <a href="#DBCRSection">DBCR</a>
+                        </li>
+                        <li>
+                            <a href="#PatchingSection">Patching</a>
+                        </li>
+                        <li>
+                            <a href="#CatalogSection">Catalog</a>
+                        </li>
+                        <li>
+                            <a href="#GrantSection">GrantConnect</a>
+                        </li>
+                    </ul>
+                </p>
+
+            </div>
+
+
+            <!-- Basic DB2 - Unix Command -->
+            <div>
+                <a href="#db2CommandSection">
+                    <img class="logo" src="cheatsheet.png"></img>
+                </a>
+                <a href="#db2CommandSection">
+                    <h1 style="text-align:center;">DB2,Unix Commands</h1>
+                </a>
+                <p class="topDescribe">Basic DB2 and Unix commands cheatsheet.
+                </p>
+            </div>
+
+            <!-- CONTACT -->
+            <div>
+                <a href="#contactSection">
+                    <img class="logo" src="contact.png"></img>
+                </a>
+                <a href="#contactSection">
+                    <h1 style="text-align:center;">Contacts</h1>
+                </a>
+                <p class="topDescribe">Database support section 772 contacts.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTIONS -->
+    <!-- New Employee Section -->
+    <div class="section" id="newEmployeeSection">
+        <h1>New Employee Software Checklist</h1>
+        <hr>
+        <p>
+            <b>Required Software and Access</b>
+            <ul>
+                <li>IBM Rational ClearQuest – Support ticket management system</li>
+                <li>IBM Rational ClearCase – Version control system for database change request files (IBM db2 files)</li>
+                <li>Winscp, Filezillia or both – FTP client to copy database files from Unix to ClearCase</li>
+                <li>Sybase PowerDesigner – Also need admin privs for base Sybase folder</li>
+                <li>Permanent Local Administrator privileges for your computer – Necessary to configure Replication Center and
+                    Control center</li>
+                <li>IBM DB2 Control Center – part of IBM DB2 DB2Copy1 folder in Start Menu (under General Administration tools
+                    folder)
+                </li>
+                <li>IBM DB2 Configuration Assistant part of IBM DB2 DB2Copy1 folder in Start Menu (under setup tools folder)</li>
+                <li>Notepad++ - good text editor to manipliate sql files</li>
+                <li>IBM Q replication software</li>
+                <li>Putty</li>
+                <li>Y drive access – directory where all database administrator documentation is. </li>
+            </ul>
+            <b>Documentation directory</b>
+            <ul>
+                <li>HOW TO Docs :
+                    <a>Y:\EDR\Solution Provider\Team Working Area\Technical Architecture\DBA Team\DBA HOW-TO Source Docs</a>
+                </li>
+                <li>Database connection Profiles : Y:\EDR\Solution Provider\Database Client Connection Profiles\DB2 Client Connection
+                    Profiles - ALL</li>
+                <li>DB2 scripts – Y:\EDR\Solution Provider\Team Working Area\Technical Architecture\DBA Team\DB2\scripts </li>
+            </ul>
+        </p>
+
+    </div>
+
+    <!-- HOW TO Section -->
+    <div class="section" id="howtoSection">
+        <h1>How to </h1>
+        <hr>
+        <!-- DBRC section -->
+        <div id="DBCRSection">
+            <h2>DBCR</h2>
+            <p>Scripts to use:</p>
+            <ol>
+                <li>BuildDbcr.sh</li>
+                <li>ApplyDBcr.sh</li>
+            </ol>
+            Steps to test and apply DBCR:
+            <ol>
+                <li>Create sql file</li>
+                <li>Test sql file
+                    <ul>
+                        <li>Connect to database</li>
+                        <li>db2 set schema &ltschema_name&gt</li>
+                        <li>db2 +c -tvsmf &ltDBCR_ID.sql&gt</li>
+                        <li>db2 rollback</li>
+                    </ul>
+                </li>
+                <li>Build Dbcrs
+                    <ul>
+                        <li>BuildDbcr.sh &ltRelease&gt &ltDBCR_ID&gt </li>
+                    </ul>
+                </li>
+                <li>Check new file into clearcase
+                    <ul>
+                        <li>Use Filezilla to move newly created file into ClearCase</li>
+                    </ul>
+                </li>
+
+                <li>Apply DBCR on Master and DEV(if no DAL impact)
+                    <ul>
+                        <li>ApplyDbcrMain.sh &ltEnv&gt --- &ltRelease&gt --- &ltDBCR Name&gt --- &ltApply Privs&gt --- &ltYour
+                            Name&gt --- &ltSkipCC&gt</li>
+                        <li>Example: ApplyDbcrMain.sh.With_BEADM_PITADM dev2 1740 EDR00268556 n kn SkipCC</li>
+                    </ul>
+                </li>
+                <li>Submit ticket</li>
+            </ol>
+            ***For full detail note, please check this document - "How to build DBCRs"
+            <ul>
+                <li>Y:\EDR\Solution Provider\Team Working Area\Technical Architecture\DBA Team\DBA HOW-TO Source Docs\How to
+                    build DBCRs.docx</li>
+            </ul>
+        </div>
+
+        <!-- Patching Section -->
+        <div id="PatchingSection">
+            <h2>Patching</h2>
+            <p>Scripts to use:</p>
+            <ol>
+                <li>View_Build_Levels.sh</li>
+                <li>ApplyPatch.sh</li>
+            </ol>
+            <p>Steps to apply patch:</p>
+            <ol>
+                <li>View current patch level of database </li>
+                <ul>
+                    <li>View_Build_Levels.sh &ltenv_name&gt &ltrelease&gt</li>
+                    <li>Example: View_Build_Levels.sh pt1 1840 </li>
+                </ul>
+                <li>Apply patch</li>
+                <ul>
+                    <li>Make sure all databases are at the same patch level</li>
+                    <li>Run apply patch script</li>
+                    <li>Example: ApplyPatch.sh UIT2 1840 3 n kn SkipCC</li>
+                </ul>
+            </ol>
+            ***For full detail note, please check this document - "How to build DBCRs"
+            <ul>
+                <li>Y:\EDR\Solution Provider\Team Working Area\Technical Architecture\DBA Team\DBA HOW-TO Source Docs\How to
+                    build DBCRs.docx</li>
+            </ul>
+        </div>
+
+        <!-- Catalog Section -->
+        <div id="CatalogSection">
+            <h2>Catalog</h2>
+            <p>Scripts to use:</p>
+            <ul>
+                <li>None</li>
+            </ul>
+            <p>Steps to catalog database:</p>
+            <ol>
+                <li>Log into (ssh) the server that needed to be cataloged </li>
+                <li>Search for Database connection profile under
+                    <ul>
+                        <li>Y:\EDR\Solution Provider\Database Client Connection Profiles\DB2 Client Connection Profiles - ALL</li>
+                    </ul>
+
+                </li>
+                <li>Use this
+                    <a href="../Catalog/Catalog2/catalog.html">Catalog-generate</a> to generate the catalog scripts or enter it manually</li>
+                <li>Run the generated scripts on the server that needed to be cataloged</li>
+            </ol>
+            ***For full detail note, please check this document - "How to build DBCRs"
+            <ul>
+                <li>Y:\EDR\Solution Provider\Team Working Area\Technical Architecture\DBA Team\DBA HOW-TO Source Docs\How to
+                    build DBCRs.docx</li>
+            </ul>
+
+        </div>
+        <!-- Catalog Section -->
+        <div id="GrantSection">
+            <h2>Grant Connect</h2>
+            <p>Scripts to use:</p>
+            <ol>
+                <li>DB_GrantConnect.sh</li>
+            </ol>
+            <p>Steps to grant connect:</p>
+            <ol>
+                <li>Check if user account is created on the server
+                    <ul>
+                        <li>log into the server</li>
+                        <li>run "lsuser &ltuser_id&gt</li>
+                        <li>if user is exsited, proceed to the next step. Otherwise, create an SR to AIX admin to have user account
+                            created</li>
+                    </ul>
+                </li>
+                <li>Run DB_GrantConnect script
+                    <ul>
+                        <li>DB_GrantConnect.sh &lthost&gt &ltInstance&gt &ltDatabase&gt &ltUserId&gt</li>
+                        <li>Example : DB_GrantConnect.sh EDRNPR601 INEODT17 DBEODT1F r6829</li>
+                    </ul>
+                </li>
+            </ol>
+            ***For full detail note, please check this document - "How to build DBCRs"
+            <ul>
+                <li>Y:\EDR\Solution Provider\Team Working Area\Technical Architecture\DBA Team\DBA HOW-TO Source Docs\How to
+                    build DBCRs.docx</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Commands Section -->
+    <div class="section" id="db2CommandSection">
+        <h1>DB2 and Unix basic commands </h1>
+        <hr>
+        <h2>DB2</h2>
+        <ul>
+            <li>db2 list db directory // to list all databases within an instance</li>
+            <li>db2 list node directory // to list all nodes within an instance</li>
+            <li>db2look -x -d &ltDB_name&gt -o &ltoutput_file&gt // to generate all DB grants/privs</li>
+            <li>db2 list utilities // check backup progress </li>
+        </ul>
+        <h2>Unix</h2>
+        <ul>
+            <li>grep -R "content" &ltpath&gt // to search content</li>
+        </ul>
+    </div>
+    
+    <!-- Contacts Section -->
+    <div class="section" id="contactSection">
+            <h1>Contacts </h1>
+            <hr>
+            <ul>
+                <li>Phone contacts list
+                    <ul>
+                        <li>Y:\272_Unit\PhoneList</li>
+                    </ul>
+                </li>
+            </ul>
+    </div>
+
+    <script src="newEmployee.js"></script>
+</body>
+
+</html>
+

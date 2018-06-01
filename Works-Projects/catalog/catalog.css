@@ -1,0 +1,87 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;   
+}
+body{
+    margin: 50px;
+    /* background: url("http://wallpaperswide.com/download/black_background_metal_hole_small-wallpaper-1280x1024.jpg") */
+}
+.container
+{
+    border: 1px solid;
+    width: 500px;
+    height: 100%;
+}
+
+.fileSelect{
+width: 100%;
+height: 100px;
+}
+
+.fileSelect input{
+    width: 100%;
+    height: 70px;
+    background: gray;
+}
+
+.inputDiv input[type=text]{
+width: 100%;
+font-size:20px;
+border:none;
+border-bottom: 1px solid gray;
+/* height:40px; */
+padding: 10px;
+outline:none;
+margin: auto;
+}
+
+.inputDiv input[type=submit],.inputDiv input[type=button] {
+    width: 100%;
+    padding:20px;
+    outline: none;
+    font-size:20px;
+    font-weight: bold;
+
+}
+.inputDiv input[type=submit]{
+    background-color: #4CAF50
+}
+
+.inputDiv input[type=submit]:hover,.inputDiv input[type=button]:hover {
+    /* background: darkgray; */
+    cursor: pointer;
+    background-color:rgb(53, 117, 56);
+}
+
+.inputDiv input[type=button]:hover {
+    background: darkgray;
+}
+.inputDiv .invalid{
+    background: pink;
+}
+
+.outputDiv{
+    width: 100%;
+    /* border: 1px solid; */
+    margin-top: 20px;
+    font-size:20px;
+    font-weight: bold;
+    padding:20px;
+}
+
+.outputDiv p input{
+    width: 90%;
+    font-size:20px;
+    margin: 1px 0px;
+    /* background: ; */
+}
+
+.outputDiv button{
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.outputDiv button:hover{
+    font-size: 1.2em;
+    color: red;
+}

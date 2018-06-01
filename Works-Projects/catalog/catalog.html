@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <link rel="stylesheet" href="catalog.css">
+</head>
+
+<body>
+    <h1>Catalog database</h1>
+    <div class="container">
+
+    <p style="text-align:center">Please open a file or drag file into the below box...</p>
+    <p style="text-align:center">or you can enter it manually...</p>
+    <div class="fileSelect">
+        <input id="openFile" type="file" onchange='readText(this)' >
+    </div>
+
+        <div class="inputDiv">
+            <form action="">
+                <input type="text" name="" id="Node" placeholder="Node name">
+                <input type="text" name="" id="Server" placeholder="Server name">
+                <input type="text" name="" id="Port" placeholder="Port number">
+                <input type="text" name="" id="Instance" placeholder="Instance name">
+                <input type="text" name="" id="Database" placeholder="Database name">
+                <input type="text" name="" id="Comment" placeholder="Comment">
+
+                <div class="buttonDiv">
+                    <span>
+                        <input type="submit" value="Generate" id="Confirm">
+                        <input type="button" value="Clear" id="Clear">
+                    </span>
+                </div>
+            </form>
+        </div>
+
+
+        
+
+    </div>
+    <div class="outputDiv">
+        Generated scripts: <span id = "signal"></span>
+        <p><button id="nodBtn">&#x2702</button ><input type="text" id="nodeScript"></p>
+        <p><button id="dbBtn" >&#x2702</button ><input type="text" id="databaseScript"></p>
+ 
+    </div>
+    <script src="catalog.js"></script>
+</body>
+
+</html>
